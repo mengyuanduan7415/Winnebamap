@@ -229,18 +229,19 @@ var swatches = $("#swatches");
             bearing: 0.29
         },
         'mcintire-park': {
-            name: "Manku Mountain",
-            description: "Winneba’s founding myth describes the Effutu migration over five hundred years ago to find a safe settlement haven that ended at the lagoon’s Manku Mountain and its waters.",
+            name: "Ayensu River",
+            description: "",
             imagepath: "img/IMG_1094.jpg",
             center: [-0.67399, 5.32963],
             zoom: 15.09,
             pitch: 60.00,
             bearing: -108.51
+        },
 
-        };
+    };
 
-        console.log(chapters['darden-towe']['name']);
-        console.log(Object.keys(chapters)[0]);
+    console.log(chapters['darden-towe']['name']);
+    console.log(Object.keys(chapters)[0]);
 
     // Add the chapters to the #chapters div on the webpage
     for (var key in chapters) {
