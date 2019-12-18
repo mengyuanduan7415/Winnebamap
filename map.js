@@ -26,15 +26,15 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
   map.on('load', function() {
   	
   var layers = [ // an array of the possible values you want to show in your legend
-        'Public hospital', // Civic Spaces.png
-        'Private hospital', // Community Park.png
-        'Clinic', // Neighborhood Park.png
+        'hotels-10dnz3', // Civic Spaces.png
+        'ecoattractions-1cz9t3', // Community Park.png
+         // Neighborhood Park.png
     ];
 
     var colors = [ // an array of the color values for each legend item
-        '#a8e193',
-        '#e8f8e3',
-        '#00801c',
+        '#dbb100',
+        '#314C02',
+        
         
     ];
 
