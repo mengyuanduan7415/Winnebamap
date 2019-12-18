@@ -26,8 +26,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
   map.on('load', function() {
   	
   var layers = [ // an array of the possible values you want to show in your legend
-        'hotels-10dnz3', // Civic Spaces.png
-        'ecoattractions-1cz9t3', // Community Park.png
+        'Hotels', // Civic Spaces.png
+        'Eco-attractions', // Community Park.png
          // Neighborhood Park.png
     ];
 
