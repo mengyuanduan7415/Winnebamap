@@ -228,15 +228,7 @@ var swatches = $("#swatches");
             pitch: 59.50,
             bearing: 0.29
         },
-        'mcintire-park': {
-            name: "Ayensu River",
-            description: "",
-            imagepath: "img/IMG_1094.jpg",
-            center: [-0.67399, 5.32963],
-            zoom: 15.09,
-            pitch: 60.00,
-            bearing: -108.51
-        },
+       
 
     };
 

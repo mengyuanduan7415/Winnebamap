@@ -79,7 +79,7 @@ button {
 #sidebar {
     position: fixed;
     left: 0;
-    width: 30%;
+    width: 20%;
     height: 100vh;
     background-color: #ffffff;
     border-right: 1px solid #ffffff;
