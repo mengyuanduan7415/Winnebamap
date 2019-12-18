@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Dancing+Script|Jomolhari|Josefin+Sans|Long+Cang|Muli|Patrick+Hand&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Typography */
+body, p {
+    font-family: 'Jomolhari', serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
+    color: #6E8F60;
+}
+
+h1,h2,h3,h4,h5,h6 { 
+    font-family: 'Jomolhari', serif;
+    font-weight: 600;
+    font-size: smaller;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1, h2 {
+    color: #ffffff;
+    background-color: #F9C7BB;
+    display: inline-block;
+    padding: 3px 6px;
+}
+
+h3 { color: #6E8F60; }
+h4 { color: #ffffff; }
+h5, h6 { color: #6E8F60; }
+
+a { color: #6E8F60; }
+a:hover { color: #f00; }
+
+/* Buttons */
+button {
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+
+
+.btn-green {
+  color: #ffffff;
+  background-color: #6E8F60;
+  border-color: #6E8F60;
+  border-radius: 10; }
+
+
+.btn-pink {
+  color:#477030;
+  background-color: #F9C7BB;
+}
+
+
+
+.button-default {
+    background-color: #F9C7BB;
+    border-radius: 0;
+    color: #ffffff;
+    padding: 7px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+.button-default:hover {
+    background-color: #6E8F60;
+}
+
+/* Page sections - size and positioning */
+
+#sidebar {
+    position: fixed;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    background-color: #FEFEF4;
+    border-right: 1px solid #FEFEF4;
+    z-index: 1;
+}
+
+#map-parent {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 70%;	/* 100% of viewport width */
+	height: 100vh;	/* 100% of viewport height */
+}
+#map { width: 100%; height: 100%; position: absolute; }
+
+#map-sidebar {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    background-color: #FEFEF4;
+    padding: 15px;
+    z-index: 1;
+    font-size: 10px;
+    max-width: 130px;
+}
+
+/* Sidebar Content */
+#sidebar>div { padding: 20px; }
+
+.page-title {
+    font-size: 30px;
+    line-height: 125%;
+    border-top: 5px solid #6E8F60;
+    border-bottom: 5px solid #6E8F60;
+}
+
+#info-window .park-image {
+    width: 100%;
+    height: 100px;
+}
+
+#chapters {
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#chapters>.chapter {
+    margin-bottom: 50px;
+}
+
+#chapters>.chapter>img {
+    width: 100%;
+}
+
+
+
+/* Map Area content */
+
+    #map-sidebar>div { margin-bottom: 30px; }
+    #map-sidebar>div:last-child { margin-bottom: 0; }
+    #color-changer .swatch {
+        border-radius: 100%;
+        display: block;
+        width: 15px;
+        height: 15px;
+        margin: 5px 0; 
+    }
+
+    .legend-key {
+        display: inline-block;
+        border-radius:100%;
+        width:10px;
+        height: 10px;
+        margin-right: 5px;
+    }
+
+    #layers-control {
+        text-align: center;
+        z-index: 1;
+    }
+
+    #layers-control h3 { 
+        line-height: initial;
+        font-size: unset;
+    }
+
+    #layers-control a {
+        font-size: 12px;
+        font-weight: 500;
+        color: #ffffff;
+        display: block;
+        margin: 0 0 5px 0;
+        padding: 0;
+        padding: 10px;
+        text-decoration: none;
+        text-align: center;
+        background-color: #ccc;
+    }
+
+    #layers-control a.active {
+        background-color: #F9C7BB;
+    }
+
+    #layers-control a:hover {
+        background-color: #6E8F60;
+    }
+    #layers-control a.active:hover {
+        background: #6E8F60;
+    }
+
+
+/* Modal */
+#screen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 1;
+    display: none;
+}
+
+.modal {
+    display: none;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 2;
+    padding: 30px;
+}
+
+.modal>.close-button {
+    color: #cccccc;
+    position:absolute;
+    right: 0;
+    top: 0;
+    margin: 10px;
+    background: none !important;
+    border: none !important;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal>.close-button:hover {
+    color: #bbbbbb !important;
+}
+
+
+/* Mapbox popups */
+.mapboxgl-popup-content {
+    background-color:rgba(110, 143, 96, 0.7);
+    border: 1px solid #6E8F60;
+    border-radius: 0;
+    color: white;
+}
+
+.mapboxgl-popup-tip {
+    border-top-color: rgba(0, 57, 77, 0.75) !important;
+}
+
+.mapboxgl-popup-close-button {
+    font-size: large;
+    font-style: unset;
+    color: white;
+    padding: 0px 6px;
+    font-weight: 300;
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib { background: none; }
+
+
+
+@media (max-width: 767.98px) {
+  .navbar-expand-md > .container,
+  .navbar-expand-md > .container-fluid {
+    padding-right: 0;
+    padding-left: 0; } }
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030; }
+
+
+.bg-pink {
+  background-color: #F9C7BB !important; }
+
+
+
+

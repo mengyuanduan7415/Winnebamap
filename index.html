@@ -1,0 +1,122 @@
+<html>
+
+<head>
+  <title>JAIPUR HEALTHCARE FACILITIES MAP</title>
+
+  <!-- Link to JQuery library (used for modal) -->  
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+  <!-- Link to Mapbox GL JS library --> 
+
+
+  <!-- Link to Mapbox GL JS css stylesheet -->  
+   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Add Google Fonts support -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Add FontAwesome support -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <!-- Link to our custom stylesheet -->  
+  <link rel="stylesheet" href="styles.css">
+  
+
+
+</head>
+
+   <header>
+      
+  <button type="button" class="btn btn-dark">Home</button>
+  
+
+ 
+    </header>
+
+ <header>
+      <nav class="navbar navbar-expand-md navbar-pink fixed-top bg-pink">
+        <a class="navbar-brand" href="file:///Users/qinmengyu/Documents/GitHub/Jaipur-city-spine/index.html">EXPLORE JAIPUR</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+  <button type="button" class="btn btn-pink">Home</button>
+  <button type="button" class="btn btn-pink">Project narrative</button>
+
+  <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-green dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Map
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <a class="dropdown-item" href="https://yuqinmeng2017.github.io/JAIPUR-MAP/">Jaipur healthcare facilities map</a>
+      <a class="dropdown-item" href="https://yuqinmeng2017.github.io/WATER-MAP/">Jaipur water supply system map</a>
+    </div>
+  </div>
+</div>
+
+
+<body>
+  
+  <!-- Map sidebar --> 
+  <div id="sidebar">
+    <div>
+      <h1 class='page-title'>JAIPUR HEALTHCARE FACILITIES</h1>
+      <!-- About this map button -->
+      <button id="about" class='button-default'><i class="fas fa-question-circle"></i>&nbsp;About this map</button>
+      <!-- Info window (populated by javascript code from the Mapbox map layers) -->
+      <div id='info-window'>
+        <div>
+          <div id='info-window-body'>
+            <p>Hover over a zone to learn more about it.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Scrolling chapters (populated by javascript code from the Mapbox map layers) -->
+      <div id="chapters"></div>
+    </div>
+  </div>
+
+  
+  <!-- The map will be added to this div by javascript --> 
+  <div id="map-parent">
+    <div id="map"></div>
+
+    <!-- Map overlay sidebar -->
+    <div id='map-sidebar'>
+      <!-- Layers control (populated by javascript code) -->
+      <div id='layers-control'>
+        <h3>Show/Hide Layers:</h3>
+      </div>
+
+    
+
+      <!-- Map legend (populated by javascript code) -->
+      <div id='legend'></div>
+
+      <!-- Reset Map button -->
+      <button id="reset" class='button-default'><i class="fas fa-redo"></i></i>&nbsp;Reset map</button>
+    </div>
+  </div>
+
+ <!-- set a button back to home page -->
+    <button id="return" class='button-default'><i class="fas fa-redo"></i></i>Back</button>
+    
+
+  <!-- A modal, hidden by default in our css, which provides info about this project when shown -->
+  <div class='modal'>
+    
+    <h2 class='modal-title'>About this project</h2>
+    
+    <div class='modal-body'><p>This is a healthcare facility map of the Jaipur City created in the Scripting Civic Engagement seminar at the University of Virginia (Fall 2017), taught by Andrea Hansen Phillips.</p><p>Map data courtesy of <a href='https://www.mapbox.com/studio/'>Mapbox Studio</a> and the GIS data from the City of Jaipur. </a></p><p>For questions or to improve this map, contact <a href='qy7ds@virginia.edu'>Qinmeng Yu</a></p></div>
+    
+    <button class='close-button'>&times;</button>  <!-- A special "x" character (the multiply sign) used in close buttons -->  
+  </div>
+  <div id="screen"></div> <!-- Black overlay behind the modal -->
+
+</body>
+<!-- Link to our custom javascript, must be placed at the end of the index.html file -->  
+<script src="map.js"></script>
+</html>
