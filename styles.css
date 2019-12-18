@@ -11,7 +11,7 @@ body, p {
     font-weight: 300;
     font-size: 14px;
     line-height: 140%;
-    color: #6E8F60;
+    color: #000000;
 }
 
 h1,h2,h3,h4,h5,h6 { 
@@ -71,7 +71,7 @@ button {
 }
 
 .button-default:hover {
-    background-color: #6E8F60;
+    background-color: #DBB100;
 }
 
 /* Page sections - size and positioning */
@@ -81,8 +81,8 @@ button {
     left: 0;
     width: 30%;
     height: 100vh;
-    background-color: #FEFEF4;
-    border-right: 1px solid #FEFEF4;
+    background-color: #ffffff;
+    border-right: 1px solid #ffffff;
     z-index: 1;
 }
 
@@ -100,7 +100,7 @@ button {
     position: absolute;
     right: 0;
     height: 100vh;
-    background-color: #FEFEF4;
+    background-color: #ffffff;
     padding: 15px;
     z-index: 1;
     font-size: 10px;
@@ -113,8 +113,10 @@ button {
 .page-title {
     font-size: 30px;
     line-height: 125%;
-    border-top: 5px solid #6E8F60;
-    border-bottom: 5px solid #6E8F60;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
 }
 
 #info-window .park-image {
@@ -186,10 +188,10 @@ button {
     }
 
     #layers-control a:hover {
-        background-color: #6E8F60;
+        background-color: #000000;
     }
     #layers-control a.active:hover {
-        background: #6E8F60;
+        background: #000000;
     }
 
 
@@ -239,7 +241,7 @@ button {
 /* Mapbox popups */
 .mapboxgl-popup-content {
     background-color:rgba(110, 143, 96, 0.7);
-    border: 1px solid #6E8F60;
+    border: 1px solid #000000;
     border-radius: 0;
     color: white;
 }
