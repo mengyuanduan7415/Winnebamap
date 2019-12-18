@@ -4,7 +4,7 @@ var mapZoom = 11;
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzYnFjZjdzbnJ5cGsifQ.O3-rVhkwfp5YkpW_B5pc6A'; 
-var map = new mapboxgl.Map({
+    var map = new mapboxgl.Map({
 	container: 'map',   
 	style: 'mapbox://styles/mengyuanduan/ck399rrzd017g1cmqlpoy69wi',
 
