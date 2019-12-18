@@ -7,7 +7,7 @@ body {
 
 /* Typography */
 body, p {
-    font-family: 'Jomolhari', serif;
+    font-family: 'Roboto', serif;
     font-weight: 300;
     font-size: 14px;
     line-height: 140%;
@@ -15,7 +15,7 @@ body, p {
 }
 
 h1,h2,h3,h4,h5,h6 { 
-    font-family: 'Jomolhari', serif;
+    font-family: 'Roboto', serif;
     font-weight: 600;
     font-size: smaller;
     text-transform: uppercase;
@@ -23,22 +23,22 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1, h2 {
-    color: #ffffff;
+    color: #000000;
     background-color: #F9C7BB;
     display: inline-block;
     padding: 3px 6px;
 }
 
-h3 { color: #6E8F60; }
-h4 { color: #ffffff; }
-h5, h6 { color: #6E8F60; }
+h3 { color: #000000; }
+h4 { color: #000000; }
+h5, h6 { color: #000000; }
 
-a { color: #6E8F60; }
+a { color: #000000; }
 a:hover { color: #f00; }
 
 /* Buttons */
 button {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Roboto', cursive;
     font-weight: 900;
     text-transform: uppercase;
     padding: 0;
@@ -47,14 +47,14 @@ button {
 
 
 .btn-green {
-  color: #ffffff;
-  background-color: #6E8F60;
-  border-color: #6E8F60;
+  color: #000000;
+  background-color: #DBB100;
+  border-color: #DBB100;
   border-radius: 10; }
 
 
 .btn-pink {
-  color:#477030;
+  color:#DBB100;
   background-color: #F9C7BB;
 }
 
