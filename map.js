@@ -3,10 +3,10 @@ var mapCenter = [75.81246, 26.91978];
 var mapZoom = 11;
 
 
-mapboxgl.accessToken = 'pk.eyJ1IjoieXVxaW5tZW5nMjAxNyIsImEiOiJjamc4ZnBpdjcxMDRmMnhxbDN0bHRiamNpIn0.8dW5tp4Ek1dn7GJvSchfqg'; 
+mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzYnFjZjdzbnJ5cGsifQ.O3-rVhkwfp5YkpW_B5pc6A'; 
 var map = new mapboxgl.Map({
 	container: 'map',   
-	style: 'mapbox://styles/yuqinmeng2017/ck3nr96up5utr1cmnvyxxqx25',
+	style: 'mapbox://styles/mengyuanduan/ck399rrzd017g1cmqlpoy69wi',
 
 });
 
