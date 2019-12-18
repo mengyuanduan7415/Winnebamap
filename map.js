@@ -127,12 +127,11 @@ map.on('load', function() {
         // [layerMachineName, layerDisplayName]
         // layerMachineName is the layer name as written in your Mapbox Studio map layers panel
         // layerDisplayName is the way you want the layer's name to appear in the layers control on the website
-        ['all-health-facilities', 'Healthcare accessibility'],
-        ['public-hospital', 'Public Hospital'],                      // layers[0]
+        ['hotels-10dnz3', 'Hotel'],
+        ['sacredsites-cq23ad', 'Traditional Sacred Sites'],                      // layers[0]
                                                                  // layers[1][1] = 'Parks'
-                                                                 ['private-hospital', 'Private Hospital'],     
-                                                                 ['clinic', 'Clinic'],
-                                                                 ['water', 'Water Body']
+                                                                 ['churchs-1qm715', 'Local Churchs'],     
+                                                                 ['waterline-36suv7', 'Water Line']
         // add additional live data layers here as needed
         ]; 
 
@@ -203,10 +202,10 @@ var swatches = $("#swatches");
             description: "A request was made to the god to change the sacrifice type, as they believed that sacrificing royalty could eventually wipe out the royal family.The god in return asked for type of wild cat to be caught alive and presented to it at its shrine.",
 
             imagepath: "img/shrine.jpg",
-            center: [-0.62019, 5.34227],
-            zoom: 16.56,
+            center: [-0.62038, 5.34222],
+            zoom: 17.51,
             pitch: 45.00,
-            bearing: -0.37
+            bearing: 0.00
         },
         'mcguffey-park': {
             name: "Traditional Effutu Hunting Ground for Aboakyer Festival",
@@ -215,25 +214,33 @@ var swatches = $("#swatches");
             imagepath: "img/4236_aboakyer-11.jpg",
 
 
-            center: [-0.63899, 5.34543],
-            zoom: 15.28,
-            pitch: 45.00,
-            bearing: -0.37
+            center: [-0.63877, 5.34496],
+            zoom: 15.68,
+            pitch: 59.00,
+            bearing: -130.40
         },
         'mcintire-park': {
             name: "Muni-Lagoon",
             description: "Muni Pomadze Lagoon, is one of 100 lagoons and estuaries along Ghana’s coast on the Gulf of Guinea. Its relationship to the city of Winneba as a sacred and productive landscape is longstanding. Winneba’s founding myth describes the Effutu migration over five hundred years ago to find a safe settlement haven that ended at the lagoon’s Manku Mountain and its waters. For centuries, Muni has enjoyed protected status as the home of the local god Penkye Otu. Winnebarians in the past have self-upheld traditional rules that guard the waters (for instance, fishing is forbidden on Wednesdays). Winneba (population 60,000) is a fishing-based community known for its annual Aboakyer Festival which draws thousands of visitors each May. The festival reaffirms the town’s relationship to the lagoon and its resident god, with the capture and slaying of a native bush-buck by competing tribal groups.",
             imagepath: "img/IMG_1094.jpg",
-            center: [-0.64237, 5.33455],
-            zoom: 15.04,
-            pitch: 45.00,
-            bearing: -0.37
+            center: [-0.65008, 5.32884],
+            zoom: 14.75,
+            pitch: 59.50,
+            bearing: 0.29
         },
+        'mcintire-park': {
+            name: "Manku Mountain",
+            description: "Winneba’s founding myth describes the Effutu migration over five hundred years ago to find a safe settlement haven that ended at the lagoon’s Manku Mountain and its waters.",
+            imagepath: "img/IMG_1094.jpg",
+            center: [-0.67399, 5.32963],
+            zoom: 15.09,
+            pitch: 60.00,
+            bearing: -108.51
 
-    };
+        };
 
-    console.log(chapters['darden-towe']['name']);
-    console.log(Object.keys(chapters)[0]);
+        console.log(chapters['darden-towe']['name']);
+        console.log(Object.keys(chapters)[0]);
 
     // Add the chapters to the #chapters div on the webpage
     for (var key in chapters) {
