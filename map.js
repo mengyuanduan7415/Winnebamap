@@ -84,12 +84,12 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
     // Create a popup on click 
     map.on('click', function(e) {   // Event listener to do some code when user clicks on the map
 
-      var clinic = map.queryRenderedFeatures(e.point, {  // Query the map at the clicked point. See https://www.mapbox.com/mapbox-gl-js/example/queryrenderedfeatures/ for an example on how queryRenderedFeatures works and https://www.mapbox.com/mapbox-gl-js/api/#map#queryrenderedfeatures for documentation
-        layers: ['clinic']    // replace this with the name of the layer from the Mapbox Studio layers panel
+      var hotel = map.queryRenderedFeatures(e.point, {  // Query the map at the clicked point. See https://www.mapbox.com/mapbox-gl-js/example/queryrenderedfeatures/ for an example on how queryRenderedFeatures works and https://www.mapbox.com/mapbox-gl-js/api/#map#queryrenderedfeatures for documentation
+        layers: ['hotels-10dnz3']    // replace this with the name of the layer from the Mapbox Studio layers panel
     });
 
       // if the layer is empty, this if statement will exit the function (no popups created) -- this is a failsafe to avoid non-functioning popups
-      if (clinic.length == 0) {
+      if (hotel.length == 0) {
         return;
     }
 
@@ -102,10 +102,10 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
     });
 
       // Set the popup location based on each feature
-      popup.setLngLat(clinic[0].geometry.coordinates);
+      popup.setLngLat(hotel[0].geometry.coordinates);
 
       // Set the contents of the popup window
-      popup.setHTML('<h4>Clinic name: ' + clinic[0].properties.Name_of_Cl + '</h4><h4>Address: ' + clinic[0].properties.Local_Addr + '</h4>');
+      popup.setHTML('<h4>Hotel name: ' + hotel[0].properties.Name + '</h4>');
             // stops[0].properties.stop_id will become the title of the popup (<h3> element)
             // stops[0].properties.stop_name will become the body of the popup
 
