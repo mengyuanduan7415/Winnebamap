@@ -1,10 +1,10 @@
 
-var mapCenter = [75.81246, 26.91978];
-var mapZoom = 11;
+var mapCenter = [-0.62279, 5.34366];
+var mapZoom = 14;
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzYnFjZjdzbnJ5cGsifQ.O3-rVhkwfp5YkpW_B5pc6A'; 
-    var map = new mapboxgl.Map({
+var map = new mapboxgl.Map({
 	container: 'map',   
 	style: 'mapbox://styles/mengyuanduan/ck399rrzd017g1cmqlpoy69wi',
 
@@ -23,22 +23,22 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
 
 // See example tutorial at https://docs.mapbox.com/help/tutorials/choropleth-studio-gl-pt-2/#create-arrays-of-intervals-and-colors
 
-  map.on('load', function() {
-  	
+map.on('load', function() {
+
   var layers = [ // an array of the possible values you want to show in your legend
         'Hotels', // Civic Spaces.png
         'Eco-attractions', // Community Park.png
          // Neighborhood Park.png
-    ];
+         ];
 
     var colors = [ // an array of the color values for each legend item
-        '#dbb100',
-        '#314C02',
-        
-        
+    '#dbb100',
+    '#314C02',
+
+
     ];
 
-     for (i=0; i<layers.length; i++) {
+    for (i=0; i<layers.length; i++) {
         var layer =layers[i]; // name of the current legend item, from the layers array
         var color =colors[i]; // color value of the current legend item, from the colors array 
         
@@ -57,10 +57,10 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
 
    map.on('mousemove', function(e) {   // Event listener to do some code when the mouse moves, see https://www.mapbox.com/mapbox-gl-js/api/#events. 
 
-        var parks = map.queryRenderedFeatures(e.point, {    
+    var parks = map.queryRenderedFeatures(e.point, {    
             layers: ['jaipur-zones']    // replace 'cville-parks' with the name of the layer you want to query (from your Mapbox Studio map, the name in the layers panel). For more info on queryRenderedFeatures, see the example at https://www.mapbox.com/mapbox-gl-js/example/queryrenderedfeatures/. Documentation at https://www.mapbox.com/mapbox-gl-js/api/#map#queryrenderedfeatures.
         });
-              
+
         if (parks.length > 0) {   // if statement to make sure the following code is only added to the info window if the mouse moves over a state
 
             $('#info-window-body').html('<h3><strong>Zone Name: ' + parks[0].properties.Zone_Name + '</strong></h3><p>Total Ward:' + parks[0].properties.Total_Ward + '</p>');
@@ -121,7 +121,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
 // -------------------------------------------------------- 
 // 6. Show/hide layers
 // See example at https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/
-    
+
     var layers = [  // an array of the layers you want to include in the layers control (layers to turn off and on)
 
         // [layerMachineName, layerDisplayName]
@@ -130,16 +130,16 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
         ['all-health-facilities', 'Healthcare accessibility'],
         ['public-hospital', 'Public Hospital'],                      // layers[0]
                                                                  // layers[1][1] = 'Parks'
-        ['private-hospital', 'Private Hospital'],     
-        ['clinic', 'Clinic'],
-        ['water', 'Water Body']
+                                                                 ['private-hospital', 'Private Hospital'],     
+                                                                 ['clinic', 'Clinic'],
+                                                                 ['water', 'Water Body']
         // add additional live data layers here as needed
-    ]; 
+        ]; 
 
     // functions to perform when map loads
     map.on('load', function () {
-        
-        
+
+
         for (i=0; i<layers.length; i++) {
 
             // add a button for each layer
@@ -149,10 +149,10 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
         // show/hide layers when button is clicked
         $("#layers-control>a").on('click', function(e) {
 
-                var clickedLayer = e.target.id;
+            var clickedLayer = e.target.id;
 
-                e.preventDefault();
-                e.stopPropagation();
+            e.preventDefault();
+            e.stopPropagation();
 
                 var visibility = map.getLayoutProperty(clickedLayer, 'visibility');  // see https://www.mapbox.com/mapbox-gl-js/api/#map#getlayoutproperty
                 console.log(visibility);
@@ -164,18 +164,18 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
                     $(e.target).addClass('active');
                     map.setLayoutProperty(clickedLayer, 'visibility', 'visible'); // see https://www.mapbox.com/mapbox-gl-js/api/#map#setlayoutproperty
                 }
-        });
+            });
     });
 
 // -------------------------------------------------------- 
 // 7. Change a layer's style(maybe delete)
 // See example at https://www.mapbox.com/mapbox-gl-js/example/color-switcher/
-    
-    var swatches = $("#swatches");
+
+var swatches = $("#swatches");
 
     var colors = [  // an array of color options for the bus stop ponts
-        '#F9C7BB',
-        '#6E8F60',
+    '#F9C7BB',
+    '#6E8F60',
     ]; 
 
     var layer = 'Public Hospital';
@@ -195,41 +195,41 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
 // -------------------------------------------------------- 
 // 8. Scroll to zoom through sites
 // See example at https://docs.mapbox.com/mapbox-gl-js/example/scroll-fly-to/
-    
+
     // A JavaScript object containing all of the data for each site "chapter" (the sites to zoom to while scrolling)
     var chapters = {
         'darden-towe': {
-            name: "Clinic typology",
-            description: "Anganwadi is a type of rural child care centre in India. They were started by the Indian government in 1975 as part of the Integrated Child Development Services program to combat child hunger and malnutrition. Anganwadi means courtyard shelter in Indian languages.",
-         
-            imagepath: "img/Anganwadi_Worker_AWW_Distributing_Dresses_to_childrens.jpg",
-             center: [75.63082, 26.98873],
-             zoom: 15.00,
-             pitch: 49.00,
-             bearing: -2.29
+            name: "Shrine",
+            description: "A request was made to the god to change the sacrifice type, as they believed that sacrificing royalty could eventually wipe out the royal family.The god in return asked for type of wild cat to be caught alive and presented to it at its shrine.",
+
+            imagepath: "img/shrine.jpg",
+            center: [-0.62019, 5.34227],
+            zoom: 16.56,
+            pitch: 45.00,
+            bearing: -0.37
         },
         'mcguffey-park': {
-            name: "Private hospital typology",
-            description: "As a specialty hospital, Apollo Spectra gives you the advantage of expert and quality healthcare with all the benefits of a large hospital but in a friendlier, more accessible facility. This is what makes us unique.With 12 Centres across 9 cities: Bengaluru, Chennai, Delhi, Jaipur, Kanpur, Mumbai, Hyderabad, Gwalior and Pune, over 71659+ successful surgeries with excellent clinical outcomes, and over 700 leading doctors, Apollo Spectra Hospitals continue to set new standards in healthcare services.",
-           
-            imagepath: "img/apollo-spectra-hospitals-chunni-ganj-kanpur-hospitals-11juorl.jpg",
+            name: "Traditional Effutu Hunting Ground for Aboakyer Festival",
+            description: "Every year on first Saturday in May, Aboakyer Festival occurs and renews the city, bonds residents with the lagoon, which is the home of their local god Penche Otu.",
+
+            imagepath: "img/4236_aboakyer-11.jpg",
 
 
-            center: [75.81702, 26.90729],
-            zoom: 14.16,
+            center: [-0.63899, 5.34543],
+            zoom: 15.28,
             pitch: 45.00,
-            bearing: -7.61
+            bearing: -0.37
         },
         'mcintire-park': {
-            name: "Public hospital typology",
-            description: "n Jaipur, Imperial Hospital is a recognized name in patient care. It was incepted in the year 2003. They are one of the well-known Multispeciality Hospitals in Shastri Nagar. Backed with a vision to offer the best in patient care and equipped with technologically advanced healthcare facilities, they are one of the upcoming names in the healthcare industry. Located in , this hospital is easily accessible by various means of transport. A team of well-trained medical staff, non-medical staff and experienced clinical technicians work round-the-clock to offer various services that include Visitor\\\\\\\'s Timings 00:00 To 00:00, Pathology Lab , Xray , Sonography , Ct Scan , Casualty , I.c.c.u. , Cafeteria , Atm Facility , Chemist , Ambulance Service , Internet Facility , Health Checkup Scheme , National Insurance , New India Assurance , Icici Lombard , Bajaj Alliance . Their professional services make them a sought after Multispeciality Hospitals in Jaipur. A team of doctors on board, including specialists are equipped with the knowledge and expertise for handling various types of medical cases. Visit their official website here www.imperialhospitalindia.com to know more about them and their services.",
-            imagepath: "img/kansal-skin-child-care-centre-jaipur-1467887734-577e307637ebc.jpg",
-           center: [75.79721, 26.94436],
-            zoom: 13.72,
+            name: "Muni-Lagoon",
+            description: "Muni Pomadze Lagoon, is one of 100 lagoons and estuaries along Ghana’s coast on the Gulf of Guinea. Its relationship to the city of Winneba as a sacred and productive landscape is longstanding. Winneba’s founding myth describes the Effutu migration over five hundred years ago to find a safe settlement haven that ended at the lagoon’s Manku Mountain and its waters. For centuries, Muni has enjoyed protected status as the home of the local god Penkye Otu. Winnebarians in the past have self-upheld traditional rules that guard the waters (for instance, fishing is forbidden on Wednesdays). Winneba (population 60,000) is a fishing-based community known for its annual Aboakyer Festival which draws thousands of visitors each May. The festival reaffirms the town’s relationship to the lagoon and its resident god, with the capture and slaying of a native bush-buck by competing tribal groups.",
+            imagepath: "img/IMG_1094.jpg",
+            center: [-0.64237, 5.33455],
+            zoom: 15.04,
             pitch: 45.00,
-            bearing: -7.61
+            bearing: -0.37
         },
-      
+
     };
 
     console.log(chapters['darden-towe']['name']);
@@ -294,12 +294,12 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ3l1YW5kdWFuIiwiYSI6ImNrMXYwOWJteTA2ZWYzY
 
 // -------------------------------------------------------- 
 // 9. Reset map button
-    
-    $("#reset").click(function() {
-        map.setCenter(mapCenter);
-        map.setZoom(mapZoom);
-        map.setPitch(0);
-        map.setBearing(0);
+
+$("#reset").click(function() {
+    map.setCenter(mapCenter);
+    map.setZoom(mapZoom);
+    map.setPitch(0);
+    map.setBearing(0);
         map.setFilter("clinic", null); // reset building permits filters
         
         // Reset all layers to visible
